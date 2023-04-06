@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Students Marksheet</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="fetchStudents()">
+    <h1>Students MarkSheet</h1>
+    <div>
+        <form>
+            <label>
+                <span>Student ID:</span><br>
+                <input id="studentId" type="number" required/>
+            </label>
+            <label>
+                <span>Student Name:</span><br>
+                <input id="studentName" type="text" required/>
+            </label>
+            <label>
+                <span>Student Marks:</span><br>
+                <input id="studentMarks" type="number" min="0" max="100" required/>
+            </label>
+
+            <label>
+                {{!-- <span> </span> --}}
+                <button id="addStudentButton">Add student</button>
+            </label>
+            <label>
+                {{!-- <span> </span> --}}
+                <button onclick="updateStudent()">Update student</button>
+            </label>
+
+        </form>
+
+        <table id="content">
+        </table>
+
+    </div>
+    <br>
+    <h2><span class="highlight">The Median of the Student Marks is : </span></h2>
+    <H2><span id="median" class="light"></span></H2>
+    <br>
+    <h2><span class="highlight">Bar Chart showing Individual Scores</span></h2>
+    <canvas id="myChart" width="20" height="10"></canvas>
+
+</body>
+<script src="js/main.js"></script>
+
+</html>
