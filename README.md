@@ -5,8 +5,11 @@ It also automatically generates a graph that gives the instructor a visual repre
 The project uses REST API, handlebars and express.js
 
 # Run the project using terminal
-Navigate to project path e.g., cd Desktop/Student_web_application
-npm install (if not installed)
+
+Navigate to project path e.g., cd Desktop/Student_web_application,
+
+npm install (if not installed),
+
 node index.js 
 
 # Output
